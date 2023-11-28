@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage[pdf]{graphviz}
+\usepackage{graphviz}
+\usepackage{amsmath}
+
+
+\begin{document}
+
+CS5200 Homework 4 Graphs\\
+Adam McNeil\\
+Question 1 \\
+
+\digraph[scale=0.5]{questionone}{
+    node [shape=circle]
+    A -> B [label=4]
+    A -> C [label=1]
+    C -> B [label=-5]
+    C -> E [label=2]
+    D -> C [label=6]
+    E -> A [label=3]
+    E -> B [label=4]
+    E -> D [label=-4]
+    }\\
+
+\begin{tabular}{ c | c | c | c | c | c }        
+    
+    & A & B & C & D & E \\ 
+    \hline
+  A & 0 & 4 & $\infty$ & 1 & $\infty$ \\  
+    \hline
+  B & $\infty$ & 0 & $\infty$ & $\infty$ & $\infty$ \\
+    \hline
+  C & $\infty$ & -5 & 0 & $\infty$ & 2 \\
+    \hline
+  D & $\infty$ & $\infty$ & 6 & 0 & $\infty$ \\     
+    \hline
+  E & 3 & 4 & $\infty$ & -4 & 0 \\
+
+\end{tabular}
+Question 2
+\digraph[scale=0.5]{questiontwo}{
+    node [shape=circle]
+    s -> v1 [label=6]
+    s -> v5 [label=10]
+    v1 -> v2 [label=4]
+    v1 -> v3 [label=4]
+    v2 -> t [label=3]
+    v3 -> v2 [label=9]
+    v3 -> t [label=7]
+    v4 -> v3 [label=6]
+    v4 -> t [label=2]
+    v5 -> v1 [label=3]
+    v5 -> v4 [label=6]
+    }\\
+
+\digraph[scale=0.5]{questiontwostepone}{
+    node [shape=circle]
+    subgraph path {
+      node [color=red]
+      edge [color=red, fontcolor=red]
+      s -> v1 [label="3/6"]
+      v1 -> v2 [label="3/4"]
+      v2 -> t [label="3/3"]
+    }
+
+    s -> v5 [label="0/10"]
+    v1 -> v3 [label="0/4"]
+    v3 -> v2 [label="0/9"]
+    v3 -> t [label="0/7"]
+    v4 -> v3 [label="0/6"]
+    v4 -> t [label="0/2"]
+    v5 -> v1 [label="0/3"]
+    v5 -> v4 [label="0/6"]
+    }\\
+
+\digraph[scale=0.5]{questiontwosteptwo}{
+    node [shape=circle]
+    subgraph path {
+      node [color=red]
+      edge [color=red, fontcolor=red]
+      s -> v1 [label="6/6"]
+      v1 -> v3 [label="3/4"]
+      v3 -> t [label="3/7"]
+      }
+      
+      s -> v5 [label="0/10"]
+      v1 -> v2 [label="3/4"]
+      v2 -> t [label="3/3"]
+      v3 -> v2 [label="0/9"]
+    v4 -> v3 [label="0/6"]
+    v4 -> t [label="0/2"]
+    v5 -> v1 [label="0/3"]
+    v5 -> v4 [label="0/6"]
+    }\\
+
+\digraph[scale=0.5]{questiontwostepthree}{
+    node [shape=circle]
+    subgraph path {
+      node [color=red]
+      edge [color=red, fontcolor=red]
+      s -> v5 [label="4/10"]
+      v5 -> v4 [label="4/6"]
+      v4 -> v3 [label="4/6"]
+      v3 -> t [label="7/7"]
+      }
+      
+      s -> v1 [label="6/6"]
+      v1 -> v2 [label="3/4"]
+      v1 -> v3 [label="3/4"]
+      v2 -> t [label="3/3"]
+      v3 -> v2 [label="0/9"]
+    v4 -> t [label="0/2"]
+    v5 -> v1 [label="0/3"]
+    }\\
+
+\digraph[scale=0.5]{questiontwostepfour}{
+    node [shape=circle]
+    subgraph path {
+      node [color=red]
+      edge [color=red, fontcolor=red]
+      s -> v5 [label="6/10"]
+      v5 -> v4 [label="6/6"]
+      v4 -> t [label="2/2"]
+      }
+      
+      s -> v1 [label="6/6"]
+      v1 -> v2 [label="3/4"]
+      v1 -> v3 [label="3/4"]
+      v2 -> t [label="3/3"]
+      v3 -> t [label="7/7"]
+      v3 -> v2 [label="0/9"]
+      v4 -> v3 [label="4/6"]
+    v5 -> v1 [label="0/3"]
+    }\\
+
+
+
+Question 3
+
+Question 4
+
+\end{document}

@@ -1,0 +1,14 @@
+digraph questiontwo {
+node [shape=circle]
+s -> v1 [label=6]
+s -> v5 [label=10]
+v1 -> v2 [label=4]
+v1 -> v3 [label=4]
+v2 -> t [label=3]
+v3 -> v2 [label=9]
+v3 -> t [label=7]
+v4 -> v3 [label=6]
+v4 -> t [label=2]
+v5 -> v1 [label=3]
+v5 -> v4 [label=6]
+}
