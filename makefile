@@ -11,4 +11,6 @@ doc: main.tex
 	pdflatex -shell-escape main.tex -o main.pdf
 
 clean:
+	rm *.pdf
+	rm *.dot
 	rm hw3

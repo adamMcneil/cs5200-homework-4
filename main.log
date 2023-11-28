@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.28)  28 NOV 2023 11:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.28)  28 NOV 2023 17:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -201,41 +201,75 @@ Package pdftex.def Info: questionone.pdf  used on input line 13.
 \openout3 = `questionone.dot'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--24
+Underfull \hbox (badness 10000) in paragraph at lines 13--56
 
  []
 
-runsystem(dot -Tpdf -o questiontwo.pdf questiontwo.dot)...executed.
 
-<questiontwo.pdf, id=2, 191.71625pt x 586.19pt>
-File: questiontwo.pdf Graphic file (type pdf)
-<use questiontwo.pdf>
-Package pdftex.def Info: questiontwo.pdf  used on input line 41.
-(pdftex.def)             Requested size: 95.85788pt x 293.09428pt.
-\dotfile=\write4
-\openout4 = `questiontwo.dot'.
+Overfull \hbox (0.75404pt too wide) in paragraph at lines 57--89
+[]\OT1/cmr/m/n/10 D(1) = [] $\OML/cmm/m/it/10 ^^Y$\OT1/cmr/m/n/10 (1) = [] 
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--55
+Underfull \hbox (badness 10000) in paragraph at lines 57--89
+
+ []
+
+
+Overfull \hbox (0.75404pt too wide) in paragraph at lines 90--122
+[]\OT1/cmr/m/n/10 D(2) = [] $\OML/cmm/m/it/10 ^^Y$\OT1/cmr/m/n/10 (2) = [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--188
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./questionone.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 189--221
+
+ []
+
+runsystem(dot -Tpdf -o questiontwo.pdf questiontwo.dot)...executed.
+
+<questiontwo.pdf, id=18, 191.71625pt x 586.19pt>
+File: questiontwo.pdf Graphic file (type pdf)
+<use questiontwo.pdf>
+Package pdftex.def Info: questiontwo.pdf  used on input line 226.
+(pdftex.def)             Requested size: 95.85788pt x 293.09428pt.
+\dotfile=\write4
+\openout4 = `questiontwo.dot'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--240
+
+ []
+
 runsystem(dot -Tpdf -o questiontwostepone.pdf questiontwostepone.dot)...execute
 d.
 
-<questiontwostepone.pdf, id=17, 227.85126pt x 586.19pt>
+<questiontwostepone.pdf, id=19, 227.85126pt x 586.19pt>
 File: questiontwostepone.pdf Graphic file (type pdf)
 <use questiontwostepone.pdf>
-Package pdftex.def Info: questiontwostepone.pdf  used on input line 56.
+Package pdftex.def Info: questiontwostepone.pdf  used on input line 241.
 (pdftex.def)             Requested size: 113.92534pt x 293.09428pt.
 \dotfile=\write5
 \openout5 = `questiontwostepone.dot'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--79
+Underfull \hbox (badness 10000) in paragraph at lines 241--260
 
  []
 
@@ -243,16 +277,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--79
 runsystem(dot -Tpdf -o questiontwosteptwo.pdf questiontwosteptwo.dot)...execute
 d.
 
-<questiontwosteptwo.pdf, id=30, 227.85126pt x 586.19pt>
+<questiontwosteptwo.pdf, id=31, 227.85126pt x 586.19pt>
 File: questiontwosteptwo.pdf Graphic file (type pdf)
 <use questiontwosteptwo.pdf>
-Package pdftex.def Info: questiontwosteptwo.pdf  used on input line 80.
+Package pdftex.def Info: questiontwosteptwo.pdf  used on input line 261.
 (pdftex.def)             Requested size: 113.92534pt x 293.09428pt.
 \dotfile=\write6
 \openout6 = `questiontwosteptwo.dot'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--103
+Underfull \hbox (badness 10000) in paragraph at lines 261--280
 
  []
 
@@ -260,16 +294,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--103
 runsystem(dot -Tpdf -o questiontwostepthree.pdf questiontwostepthree.dot)...exe
 cuted.
 
-<questiontwostepthree.pdf, id=42, 212.795pt x 586.19pt>
+<questiontwostepthree.pdf, id=43, 212.795pt x 586.19pt>
 File: questiontwostepthree.pdf Graphic file (type pdf)
 <use questiontwostepthree.pdf>
-Package pdftex.def Info: questiontwostepthree.pdf  used on input line 104.
+Package pdftex.def Info: questiontwostepthree.pdf  used on input line 281.
 (pdftex.def)             Requested size: 106.39723pt x 293.09428pt.
 \dotfile=\write7
 \openout7 = `questiontwostepthree.dot'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--123
+Underfull \hbox (badness 10000) in paragraph at lines 281--300
 
  []
 
@@ -277,35 +311,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--123
 runsystem(dot -Tpdf -o questiontwostepfour.pdf questiontwostepfour.dot)...execu
 ted.
 
-<questiontwostepfour.pdf, id=54, 227.85126pt x 586.19pt>
+<questiontwostepfour.pdf, id=55, 212.795pt x 586.19pt>
 File: questiontwostepfour.pdf Graphic file (type pdf)
 <use questiontwostepfour.pdf>
-Package pdftex.def Info: questiontwostepfour.pdf  used on input line 124.
-(pdftex.def)             Requested size: 113.92534pt x 293.09428pt.
+Package pdftex.def Info: questiontwostepfour.pdf  used on input line 301.
+(pdftex.def)             Requested size: 106.39723pt x 293.09428pt.
 \dotfile=\write8
 \openout8 = `questiontwostepfour.dot'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--147
+Underfull \hbox (badness 10000) in paragraph at lines 301--320
 
  []
 
-[5 <./questiontwostepthree.pdf>] [6 <./questiontwostepfour.pdf>] (./main.aux) )
- 
+[5 <./questiontwostepthree.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 323--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--336
+
+ []
+
+[6 <./questiontwostepfour.pdf>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  2621 strings out of 480247
  43570 string characters out of 5896151
- 330500 words of memory out of 5000000
+ 369500 words of memory out of 5000000
  20553 multiletter control sequences out of 15000+600000
  469713 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  70i,7n,76p,252b,111s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (6 pages, 66814 bytes).
+</usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (6 pages, 85420 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 92 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

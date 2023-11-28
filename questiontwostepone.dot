@@ -1,9 +1,5 @@
 digraph questiontwostepone {
 node [shape=circle]
-s[color=red]
-v1[color=red]
-v2[color=red]
-t[color=red]
 subgraph path {
 node [color=red]
 edge [color=red, fontcolor=red]
