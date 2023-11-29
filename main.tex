@@ -321,9 +321,33 @@ Question 2
 
 
 Question 3\\
-Strategy A: 5 different paths until the final answer is reached\\
+Strategy A: 5 different paths are needed until the final answer is reached\\
 ${s -> v1 -> v2 -> t}$\\
+${s -> v6 -> v3 -> t}$\\
+${s -> v5 -> v4 -> t}$\\
+${s -> v1 -> v3 -> t}$\\
+${s -> v5 -> v4 -> v3-> t}$\\
 \\
+Strategy B: 4 different paths are need until the final answer is reached\\
+${s -> v5 -> v4 -> v3-> t}$\\
+${s -> v1 -> v2 -> t}$\\
+${s -> v5 -> v6 -> v3 -> v4 -> t}$\\
+${s -> v6 -> v3 -> t}$\\
+
+\digraph[scale=0.5]{questionthree}{
+    node [shape=circle]
+      s -> v1 [label="6"]
+      v1 -> v2 [label="4"]
+      v1 -> v3 [label="4"]
+      v2 -> t [label="3"]
+      v3 -> t [label="7"]
+      v3 -> v2 [label="9"]
+      v4 -> v3 [label="6"]
+    v5 -> v1 [label="3"]
+    }\\
+
+
+
 Question 4\\
 1) For a given cut (S, T), the net flow from S to T can be greater than capacity of S and T.\\
 False\\
