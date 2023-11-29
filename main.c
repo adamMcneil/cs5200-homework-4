@@ -232,7 +232,42 @@ struct JohnsonReturn {
 
 };
 
+struct Digraph* createStart(struct Digraph* digraph) {
+    struct Digraph* newDigraph = digraphBuilder(digraph->numberOfNodes + 1, digraph->numberOfEdges + digraph->numberOfNodes);
+    for (int i = 0; i < newDigraph->numberOfNodes; i++) {
+        newDigraph->graph[0][i] = 0;
+        newDigraph->graph[i][0] = INFINITY;
+    }
+    for (int i = 0; i < digraph->numberOfNodes; i++) {
+        for (int j = 0; j < digraph->numberOfNodes; j++) {
+            newDigraph->graph[i+1][j+1] = digraph->graph[i][j];
+        }
+    }
+    return newDigraph;
+
+}
+
+struct Digraph* reweighGraph(struct Digraph* digraph, struct BellmanFordReturn* data) {
+    struct Digraph* newDigraph = digraphBuilder(digraph->numberOfNodes, digraph->numberOfEdges);
+    for (int i = 0; i < newDigraph->numberOfNodes; i++) {
+        for (int j = 0; j < newDigraph->numberOfNodes; j++) {
+            if (digraph->graph[i][j] == INFINITY) {
+                newDigraph->graph[i][j] = INFINITY;
+            }
+            else {
+                newDigraph->graph[i][j] = digraph->graph[i][j] + data->distances[i] - data->distances[j];
+            }
+        }
+    }
+    return newDigraph;
+}
+
 struct JohnsonReturn* johnson(struct Digraph* digraph) {
+    struct Digraph* newDigraph = createStart(digraph);
+    struct BellmanFordReturn* bellmanFordReturn = bellmanFord(newDigraph);
+    printBellman(bellmanFordReturn);
+    struct Digraph* noNegativeGraph = reweighGraph(digraph, bellmanFordReturn);
+    printDigraph(noNegativeGraph);
 
 }
 
@@ -241,9 +276,8 @@ int main(int argc, char* argv[]) {
     
     struct Digraph* digraph = readInputFile(file_name);
     printDigraph(digraph);
-    
-    struct BellmanFordReturn* data = bellmanFord(digraph);
-    printBellman(data);
+
+    johnson(digraph);
 
     {
     printf("Dijkstra's algorithm:\n");
