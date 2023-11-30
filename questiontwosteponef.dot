@@ -1,0 +1,23 @@
+digraph questiontwosteponef {
+node [shape=circle]
+s [rank=max]
+subgraph path {
+node [color=red]
+edge [color=red, fontcolor=red]
+v1 -> s [label=3]
+v2 -> v1 [label=3]
+t -> v2 [label=3]
+}
+s -> v1 [label="3"]
+v1 -> v2 [label="1"]
+v2 -> t [label="0"]
+
+s -> v5 [label="10"]
+v1 -> v3 [label="4"]
+v3 -> v2 [label="9"]
+v3 -> t [label="7"]
+v4 -> v3 [label="6"]
+v4 -> t [label="2"]
+v5 -> v1 [label="3"]
+v5 -> v4 [label="6"]
+}
