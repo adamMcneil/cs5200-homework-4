@@ -255,7 +255,7 @@ struct Digraph* reweighGraph(struct Digraph* digraph, struct BellmanFordReturn* 
                 newDigraph->graph[i][j] = INFINITY;
             }
             else {
-                newDigraph->graph[i][j] = digraph->graph[i][j] + data->distances[i] - data->distances[j];
+                newDigraph->graph[i][j] = digraph->graph[i][j] + data->distances[i+1] - data->distances[j+1];
             }
         }
     }
@@ -268,6 +268,7 @@ struct JohnsonReturn* johnson(struct Digraph* digraph) {
     printBellman(bellmanFordReturn);
     struct Digraph* noNegativeGraph = reweighGraph(digraph, bellmanFordReturn);
     printDigraph(noNegativeGraph);
+    
 
 }
 
