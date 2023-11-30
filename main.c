@@ -121,8 +121,8 @@ void printDijkstra(struct DijkstraReturn* data) {
             printf("v%d->", parentArray[i]+1);
         }
         printf("v%d, %d\n", i+1, data->distance[i]+1);
- 
     }
+    printf("\n");
 }
 
 int getMinimumEdge(struct Digraph* digraph, int node) {
@@ -153,7 +153,7 @@ int getClosestNode(int* array, int n) {
     return minimumNode;
 }
 
-struct DijkstraReturn* dijkstraArray(struct Digraph* inputDigraph) {
+struct DijkstraReturn* dijkstraArray(struct Digraph* inputDigraph, int source) {
     struct Digraph* digraph = digraphCopier(inputDigraph);
     int* distance = malloc(sizeof(int) * digraph->numberOfNodes);
     int* previous = malloc(sizeof(int) * digraph->numberOfNodes);
@@ -163,14 +163,14 @@ struct DijkstraReturn* dijkstraArray(struct Digraph* inputDigraph) {
         previous[i] = -1;
         nodesToVisit[i] = INFINITY;
     } 
-    distance[0] = 0;
-    nodesToVisit[0] = 0;
+    distance[source] = 0;
+    nodesToVisit[source] = 0;
 
     int closestNode = getClosestNode(nodesToVisit, digraph->numberOfNodes);
-    nodesToVisit[0] = -1;
+    nodesToVisit[source] = -1;
     while (closestNode != -1) {
         for (int i = 0; i < digraph->numberOfNodes; i++) {
-            if (digraph->graph[closestNode][i] == 0) {
+            if (digraph->graph[closestNode][i] == INFINITY) {
                 continue;
             }
             int newPathDistance = distance[closestNode] + digraph->graph[closestNode][i];
@@ -185,7 +185,7 @@ struct DijkstraReturn* dijkstraArray(struct Digraph* inputDigraph) {
             nodesToVisit[closestNode] = -1;
         }
     }
-    struct DijkstraReturn* returnData = dijkstraReturnBuilder(0, digraph->numberOfNodes, distance, previous);
+    struct DijkstraReturn* returnData = dijkstraReturnBuilder(source, digraph->numberOfNodes, distance, previous);
     return returnData;
 }
 
@@ -229,7 +229,8 @@ struct BellmanFordReturn* bellmanFord(struct Digraph* digraph) {
 }
 
 struct JohnsonReturn {
-
+    struct DijkstraReturn** dijkstra;
+    int** realDistances;
 };
 
 struct Digraph* createStart(struct Digraph* digraph) {
@@ -262,13 +263,40 @@ struct Digraph* reweighGraph(struct Digraph* digraph, struct BellmanFordReturn* 
     return newDigraph;
 }
 
-struct JohnsonReturn* johnson(struct Digraph* digraph) {
+void johnson(struct Digraph* digraph) {
     struct Digraph* newDigraph = createStart(digraph);
     struct BellmanFordReturn* bellmanFordReturn = bellmanFord(newDigraph);
-    printBellman(bellmanFordReturn);
     struct Digraph* noNegativeGraph = reweighGraph(digraph, bellmanFordReturn);
-    printDigraph(noNegativeGraph);
+
+    struct DijkstraReturn** shortestPathData = (struct DijkstraReturn *) malloc(sizeof(struct DijkstraReturn) * digraph->numberOfNodes);
+    for (int i = 0; i < noNegativeGraph->numberOfNodes; i++) {
+        shortestPathData[i] = dijkstraArray(noNegativeGraph, i);
+    }
     
+    int numberOfIteratioins = digraph->numberOfNodes;
+    if (numberOfIteratioins % 2 == 1) {
+        numberOfIteratioins--;
+    }
+    printf("All pairs shortest paths:\n");
+    for (int i = 0; i < numberOfIteratioins; i++) {
+        printf("(v%d, v%d): ", i+1, numberOfIteratioins-i-1+1);
+
+        int parentArray[shortestPathData[i]->numberOfNodes];
+        parentArray[0] = numberOfIteratioins-i-1;
+
+        int distance = 0;
+        int length = 1;
+        while (parentArray[length-1] != i) {
+            parentArray[length] = shortestPathData[i]->predecessor[parentArray[length-1]];
+            distance += digraph->graph[parentArray[length]][parentArray[length-1]];
+            length++;
+        }
+        for (int i = length - 1; i > 0; i--) {
+            printf("v%d->", parentArray[i]+1);
+        }
+        printf("v%d; %d\n", numberOfIteratioins-i-1+1, distance);
+    }
+
 
 }
 
@@ -276,22 +304,21 @@ int main(int argc, char* argv[]) {
     char* file_name = argv[1];
     
     struct Digraph* digraph = readInputFile(file_name);
-    printDigraph(digraph);
 
     johnson(digraph);
 
-    {
-    printf("Dijkstra's algorithm:\n");
-    printf("- Array implementation\n");
-    double time_spent = 0.0;
-    clock_t begin = clock();
-    struct DijkstraReturn* Ddata = dijkstraArray(digraph);
-    clock_t end = clock();
-    time_spent += (double)(end - begin) / CLOCKS_PER_SEC; 
-    printf("Running time: %f\n", time_spent);
-    printDijkstra(Ddata);
-    printf("\n");
-    }
+    // {
+    // printf("Dijkstra's algorithm:\n");
+    // printf("- Array implementation\n");
+    // double time_spent = 0.0;
+    // clock_t begin = clock();
+    // struct DijkstraReturn* Ddata = dijkstraArray(digraph, 0);
+    // clock_t end = clock();
+    // time_spent += (double)(end - begin) / CLOCKS_PER_SEC; 
+    // printf("Running time: %f\n", time_spent);
+    // printDijkstra(Ddata);
+    // printf("\n");
+    // }
 
     return 0;
 }
