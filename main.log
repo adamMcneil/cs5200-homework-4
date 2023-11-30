@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.28)  30 NOV 2023 16:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.28)  30 NOV 2023 16:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -196,7 +196,7 @@ runsystem(dot -Tpdf -o questionone.pdf questionone.dot)...executed.
 File: questionone.pdf Graphic file (type pdf)
 <use questionone.pdf>
 Package pdftex.def Info: questionone.pdf  used on input line 13.
-(pdftex.def)             Requested size: 105.89536pt x 189.2064pt.
+(pdftex.def)             Requested size: 84.715pt x 151.36281pt.
 \dotfile=\write3
 \openout3 = `questionone.dot'.
 
@@ -248,14 +248,9 @@ runsystem(dot -Tpdf -o questiontwo.pdf questiontwo.dot)...executed.
 File: questiontwo.pdf Graphic file (type pdf)
 <use questiontwo.pdf>
 Package pdftex.def Info: questiontwo.pdf  used on input line 226.
-(pdftex.def)             Requested size: 95.85788pt x 293.09428pt.
+(pdftex.def)             Requested size: 76.68513pt x 234.47185pt.
 \dotfile=\write4
 \openout4 = `questiontwo.dot'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--240
-
- []
 
 runsystem(dot -Tpdf -o questiontwosteponef.pdf questiontwosteponef.dot)...execu
 ted.
@@ -264,148 +259,153 @@ ted.
 File: questiontwosteponef.pdf Graphic file (type pdf)
 <use questiontwosteponef.pdf>
 Package pdftex.def Info: questiontwosteponef.pdf  used on input line 241.
-(pdftex.def)             Requested size: 97.86537pt x 293.09428pt.
+(pdftex.def)             Requested size: 78.2911pt x 234.47185pt.
 \dotfile=\write5
 \openout5 = `questiontwosteponef.dot'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--264
-
- []
-
-[2 <./questiontwo.pdf>]
 runsystem(dot -Tpdf -o questiontwostepone.pdf questiontwostepone.dot)...execute
 d.
 
+[2 <./questiontwo.pdf>]
 <questiontwostepone.pdf, id=31, 227.85126pt x 586.19pt>
 File: questiontwostepone.pdf Graphic file (type pdf)
 <use questiontwostepone.pdf>
 Package pdftex.def Info: questiontwostepone.pdf  used on input line 265.
-(pdftex.def)             Requested size: 113.92534pt x 293.09428pt.
+(pdftex.def)             Requested size: 91.13889pt x 234.47185pt.
 \dotfile=\write6
 \openout6 = `questiontwostepone.dot'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--284
-
- []
-
-[3 <./questiontwosteponef.pdf>]
 runsystem(dot -Tpdf -o questiontwosteptwof.pdf questiontwosteptwof.dot)...execu
 ted.
 
-<questiontwosteptwof.pdf, id=43, 315.1775pt x 681.54625pt>
+<questiontwosteptwof.pdf, id=32, 232.87pt x 586.19pt>
 File: questiontwosteptwof.pdf Graphic file (type pdf)
 <use questiontwosteptwof.pdf>
 Package pdftex.def Info: questiontwosteptwof.pdf  used on input line 285.
-(pdftex.def)             Requested size: 157.58836pt x 340.7723pt.
+(pdftex.def)             Requested size: 93.14633pt x 234.47185pt.
 \dotfile=\write7
 \openout7 = `questiontwosteptwof.dot'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--315
-
- []
-
-[4 <./questiontwostepone.pdf>]
 runsystem(dot -Tpdf -o questiontwosteptwo.pdf questiontwosteptwo.dot)...execute
 d.
 
-<questiontwosteptwo.pdf, id=55, 227.85126pt x 586.19pt>
+ [3 <./questiontwosteponef.pdf> <./questiontwostepone.pdf
+
+pdfTeX warning: pdflatex (file ./questiontwostepone.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>]
+<questiontwosteptwo.pdf, id=51, 227.85126pt x 586.19pt>
 File: questiontwosteptwo.pdf Graphic file (type pdf)
 <use questiontwosteptwo.pdf>
 Package pdftex.def Info: questiontwosteptwo.pdf  used on input line 316.
-(pdftex.def)             Requested size: 113.92534pt x 293.09428pt.
+(pdftex.def)             Requested size: 91.13889pt x 234.47185pt.
 \dotfile=\write8
 \openout8 = `questiontwosteptwo.dot'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--335
+Underfull \hbox (badness 10000) in paragraph at lines 316--336
 
  []
 
-[5 <./questiontwosteptwof.pdf>]
-runsystem(dot -Tpdf -o questiontwosteptwof.pdf questiontwosteptwof.dot)...execu
-ted.
+runsystem(dot -Tpdf -o questiontwostepthreef.pdf questiontwostepthreef.dot)...e
+xecuted.
 
-File: questiontwosteptwof.pdf Graphic file (type pdf)
-<use questiontwosteptwof.pdf>
-Package pdftex.def Info: questiontwosteptwof.pdf  used on input line 336.
-(pdftex.def)             Requested size: 157.58836pt x 340.7723pt.
+<questiontwostepthreef.pdf, id=52, 315.1775pt x 681.54625pt>
+File: questiontwostepthreef.pdf Graphic file (type pdf)
+<use questiontwostepthreef.pdf>
+Package pdftex.def Info: questiontwostepthreef.pdf  used on input line 337.
+(pdftex.def)             Requested size: 126.06876pt x 272.61366pt.
 \dotfile=\write9
-\openout9 = `questiontwosteptwof.dot'.
+\openout9 = `questiontwostepthreef.dot'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 336--370
-
- []
-
-[6 <./questiontwosteptwo.pdf>]
 runsystem(dot -Tpdf -o questiontwostepthree.pdf questiontwostepthree.dot)...exe
 cuted.
 
-<questiontwostepthree.pdf, id=78, 212.795pt x 586.19pt>
+[4 <./questiontwosteptwof.pdf> <./questiontwosteptwo.pdf
+
+pdfTeX warning: pdflatex (file ./questiontwosteptwo.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>]
+<questiontwostepthree.pdf, id=71, 212.795pt x 586.19pt>
 File: questiontwostepthree.pdf Graphic file (type pdf)
 <use questiontwostepthree.pdf>
-Package pdftex.def Info: questiontwostepthree.pdf  used on input line 371.
-(pdftex.def)             Requested size: 106.39723pt x 293.09428pt.
+Package pdftex.def Info: questiontwostepthree.pdf  used on input line 372.
+(pdftex.def)             Requested size: 85.11649pt x 234.47185pt.
 \dotfile=\write10
 \openout10 = `questiontwostepthree.dot'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--390
+Underfull \hbox (badness 10000) in paragraph at lines 372--392
 
  []
 
-[7]
+runsystem(dot -Tpdf -o questiontwostepfourf.pdf questiontwostepfourf.dot)...exe
+cuted.
+
+<questiontwostepfourf.pdf, id=72, 366.36874pt x 586.19pt>
+File: questiontwostepfourf.pdf Graphic file (type pdf)
+<use questiontwostepfourf.pdf>
+Package pdftex.def Info: questiontwostepfourf.pdf  used on input line 393.
+(pdftex.def)             Requested size: 146.54489pt x 234.47185pt.
+\dotfile=\write11
+\openout11 = `questiontwostepfourf.dot'.
+
 runsystem(dot -Tpdf -o questiontwostepfour.pdf questiontwostepfour.dot)...execu
 ted.
 
-<questiontwostepfour.pdf, id=83, 212.795pt x 586.19pt>
+[5 <./questiontwostepthreef.pdf> <./questiontwostepthree.pdf
+
+pdfTeX warning: pdflatex (file ./questiontwostepthree.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>]
+<questiontwostepfour.pdf, id=91, 212.795pt x 586.19pt>
 File: questiontwostepfour.pdf Graphic file (type pdf)
 <use questiontwostepfour.pdf>
-Package pdftex.def Info: questiontwostepfour.pdf  used on input line 391.
-(pdftex.def)             Requested size: 106.39723pt x 293.09428pt.
-\dotfile=\write11
-\openout11 = `questiontwostepfour.dot'.
+Package pdftex.def Info: questiontwostepfour.pdf  used on input line 429.
+(pdftex.def)             Requested size: 85.11649pt x 234.47185pt.
+\dotfile=\write12
+\openout12 = `questiontwostepfour.dot'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--410
-
- []
-
-[8 <./questiontwostepthree.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 413--427
+Underfull \hbox (badness 10000) in paragraph at lines 429--448
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--427
+Underfull \hbox (badness 10000) in paragraph at lines 451--465
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--444
+Underfull \hbox (badness 10000) in paragraph at lines 451--465
 
  []
 
-[9 <./questiontwostepfour.pdf>] [10] (./main.aux) ) 
+[6 <./questiontwostepfourf.pdf> <./questiontwostepfour.pdf
+
+pdfTeX warning: pdflatex (file ./questiontwostepfour.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 473--482
+
+ []
+
+[7] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2635 strings out of 480247
- 44002 string characters out of 5896151
- 369502 words of memory out of 5000000
- 20565 multiletter control sequences out of 15000+600000
+ 2649 strings out of 480247
+ 44455 string characters out of 5896151
+ 369500 words of memory out of 5000000
+ 20577 multiletter control sequences out of 15000+600000
  469713 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  70i,7n,76p,252b,111s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (10 pages, 100671 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (7 pages, 114399 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,7 +10,7 @@ CS5200 Homework 4 Graphs\\
 Adam McNeil\\
 Question 1 \\
 
-\digraph[scale=0.5]{questionone}{
+\digraph[scale=0.4]{questionone}{
     node [shape=circle]
     A -> B [label=4]
     A -> C [label=1]
@@ -223,7 +223,7 @@ ${\pi}$(5) =
 
 
 Question 2\\
-\digraph[scale=0.5]{questiontwo}{
+\digraph[scale=0.4]{questiontwo}{
     node [shape=circle]
     s -> v1 [label=6]
     s -> v5 [label=10]
@@ -237,8 +237,8 @@ Question 2\\
     v5 -> v1 [label=3]
     v5 -> v4 [label=6]
     }\\
-
-\digraph[scale=0.5]{questiontwosteponef}{
+Step 1\\
+\digraph[scale=0.4]{questiontwosteponef}{
   node [shape=circle]
   s [rank=max]
   subgraph path {
@@ -260,9 +260,9 @@ Question 2\\
   v4 -> t [label="2"]
   v5 -> v1 [label="3"]
   v5 -> v4 [label="6"]
-  }\\
+  }
 
-\digraph[scale=0.5]{questiontwostepone}{
+\digraph[scale=0.4]{questiontwostepone}{
     node [shape=circle]
     subgraph path {
       node [color=red]
@@ -281,8 +281,8 @@ Question 2\\
     v5 -> v1 [label="0/3"]
     v5 -> v4 [label="0/6"]
     }\\
-
-\digraph[scale=0.5]{questiontwosteptwof}{
+Step 2\\
+\digraph[scale=0.4]{questiontwosteptwof}{
   node [shape=circle]
   s [rank=max]
   t [rank=min]
@@ -311,9 +311,9 @@ Question 2\\
   v4 -> t [label="2"]
   v5 -> v1 [label="3"]
   v5 -> v4 [label="6"]
-  }\\
+  }
 
-\digraph[scale=0.5]{questiontwosteptwo}{
+\digraph[scale=0.4]{questiontwosteptwo}{
     node [shape=circle]
     subgraph path {
       node [color=red]
@@ -332,8 +332,9 @@ Question 2\\
     v5 -> v1 [label="0/3"]
     v5 -> v4 [label="0/6"]
     }\\
+    Step 3\\
 
-    \digraph[scale=0.5]{questiontwosteptwof}{
+    \digraph[scale=0.4]{questiontwostepthreef}{
       node [shape=circle]
       s [rank=max]
       t [rank=min]
@@ -366,9 +367,9 @@ Question 2\\
       v3 -> v2 [label="9"]
       v4 -> t [label="2"]
       v5 -> v1 [label="3"]
-      }\\
+      }
 
-\digraph[scale=0.5]{questiontwostepthree}{
+\digraph[scale=0.4]{questiontwostepthree}{
     node [shape=circle]
     subgraph path {
       node [color=red]
@@ -387,8 +388,45 @@ Question 2\\
     v4 -> t [label="0/2"]
     v5 -> v1 [label="0/3"]
     }\\
+    Step 4\\
 
-\digraph[scale=0.5]{questiontwostepfour}{
+\digraph[scale=0.4]{questiontwostepfourf}{
+  node [shape=circle]
+  s [rank=max]
+  t [rank=min]
+  subgraph path {
+    node [color=red]
+    edge [color=red, fontcolor=red]
+    t -> v4 [label=2]
+    v4 -> v5 [label=6]
+    v5 -> s [label=6]
+
+    }
+    % back edges
+    v2 -> v1 [label=3]
+    t -> v2 [label=3]
+    v1 -> s [label=6]
+    v3 -> v1 [label=3]
+    v3 -> v4 [label=4]
+    t -> v3 [label=7]
+    
+    % edges with flow
+    s -> v1 [label="0"]
+    v1 -> v2 [label="1"]
+    v2 -> t [label="0"]
+    v1 -> v3 [label="1"]
+    v3 -> t [label="7"]
+    s -> v5 [label="4"]
+    v5 -> v4 [label="0"]
+    v4 -> v3 [label="2"]
+    v4 -> t [label="0"]
+
+    %edges without flow
+  v3 -> v2 [label="9"]
+  v5 -> v1 [label="3"]
+  }
+
+\digraph[scale=0.4]{questiontwostepfour}{
     node [shape=circle]
     subgraph path {
       node [color=red]
@@ -425,7 +463,7 @@ ${s -> v5 -> v6 -> v3 -> v4 -> t}$\\
 ${s -> v6 -> v3 -> t}$\\
 Strategy A is always worse or equal to Strategy B.\\
 
-% \digraph[scale=0.5]{questionthree}{
+% \digraph[scale=0.4]{questionthree}{
 %     node [shape=circle]
 %       s -> v1 [label=""]
 %     }\\
