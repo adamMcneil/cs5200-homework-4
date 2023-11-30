@@ -480,8 +480,16 @@ False\\
 4) The Dijksta's algorithm can be used to find the all-pairs shortest paths in a weighted directed graph, and it is more efficient than some dynamic programming solution.\\
 True\\
 
-Bonus:
-
-
+Bonus:\\
+(a) The MaxFlow algorithm is able to correct mistakes that it has made in the past, so by combining the solution from the smaller problem you will get the correct answer.
+Since it does not matter what terminal the flow goes to or where the flow comes from, looking at the sources and terminals individual will still give the correct answer as long as the back edges are kept in the graph so the graph is able to correct any mistakes it makes. 
+\\
+\\
+(b) All the sinks can be combined into one sink. 
+All the terminals can be combined into one terminal. 
+To do this all that needs to be done is to create a new sink node with all the edges of the other sink nodes.
+If two sinks had an edge to the same node a new edge can be added with the capacity of the two edges combined.
+The same thing can be done with the terminals. 
+This reduces the problem to be just one run of MaxFlow instead of n * m runs of MaxFlow.
 
 \end{document}
