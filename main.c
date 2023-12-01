@@ -263,12 +263,12 @@ struct Digraph* reweighGraph(struct Digraph* digraph, struct BellmanFordReturn* 
     return newDigraph;
 }
 
-void johnson(struct Digraph* digraph) {
+void johnson(struct Digraph* digraph, char* outputFileName) {
     struct Digraph* newDigraph = createStart(digraph);
     struct BellmanFordReturn* bellmanFordReturn = bellmanFord(newDigraph);
     struct Digraph* noNegativeGraph = reweighGraph(digraph, bellmanFordReturn);
 
-    struct DijkstraReturn** shortestPathData = (struct DijkstraReturn *) malloc(sizeof(struct DijkstraReturn) * digraph->numberOfNodes);
+    struct DijkstraReturn** shortestPathData = (struct DijkstraReturn **) malloc(sizeof(struct DijkstraReturn) * digraph->numberOfNodes);
     for (int i = 0; i < noNegativeGraph->numberOfNodes; i++) {
         shortestPathData[i] = dijkstraArray(noNegativeGraph, i);
     }
@@ -277,9 +277,12 @@ void johnson(struct Digraph* digraph) {
     if (numberOfIteratioins % 2 == 1) {
         numberOfIteratioins--;
     }
-    printf("All pairs shortest paths:\n");
+
+    FILE* fp;
+    fp = fopen(outputFileName, "w+");
+    fprintf(fp, "All pairs shortest paths:\n");
     for (int i = 0; i < numberOfIteratioins; i++) {
-        printf("(v%d, v%d): ", i+1, numberOfIteratioins-i-1+1);
+        fprintf(fp, "(v%d, v%d): ", i+1, numberOfIteratioins-i-1+1);
 
         int parentArray[shortestPathData[i]->numberOfNodes];
         parentArray[0] = numberOfIteratioins-i-1;
@@ -292,20 +295,21 @@ void johnson(struct Digraph* digraph) {
             length++;
         }
         for (int i = length - 1; i > 0; i--) {
-            printf("v%d->", parentArray[i]+1);
+            fprintf(fp, "v%d->", parentArray[i]+1);
         }
-        printf("v%d; %d\n", numberOfIteratioins-i-1+1, distance);
+        fprintf(fp, "v%d; %d\n", numberOfIteratioins-i-1+1, distance);
     }
 
 
 }
 
 int main(int argc, char* argv[]) {
-    char* file_name = argv[1];
+    char* inputFileName = argv[1];
+    char* outputFileName = argv[2];
     
-    struct Digraph* digraph = readInputFile(file_name);
+    struct Digraph* digraph = readInputFile(inputFileName);
 
-    johnson(digraph);
+    johnson(digraph, outputFileName);
 
     // {
     // printf("Dijkstra's algorithm:\n");
