@@ -461,12 +461,17 @@ ${s -> v5 -> v4 -> v3-> t}$\\
 ${s -> v1 -> v2 -> t}$\\
 ${s -> v5 -> v6 -> v3 -> v4 -> t}$\\
 ${s -> v6 -> v3 -> t}$\\
-Strategy A is always worse or equal to Strategy B.\\
 
-% \digraph[scale=0.4]{questionthree}{
-%     node [shape=circle]
-%       s -> v1 [label=""]
-%     }\\
+\digraph[scale=0.4]{questionthree}{
+    node [shape=circle]
+      s -> v1 [label="6"]
+      s -> v2 [label="5"]
+      s -> v3 [label="10"]
+      v1 -> v2 [label="6"]
+      v2 -> t [label="11"]
+      v3 -> v2 [label="11"]
+      v3 -> t [label="9"]
+    }\\
 
 
 
